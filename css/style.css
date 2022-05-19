@@ -28,7 +28,7 @@ header {
     align-items: center;
     background-color: rgba(0,0,0,.75);
     position: absolute;
-    z-index: 2;
+    z-index: 50;
 }
 
 #logo {
@@ -100,6 +100,62 @@ input::placeholder {
 #login:hover {
     color:rgb(139, 139, 139);
 }
+/* ---------------슬라이드 이미지 */
+#slide {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-list {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    left: 100%;
+    z-index: 20;
+}
+
+.slide-list:nth-of-type(1) {
+    left: 0;
+}
+
+.slide-list > h3{
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    text-shadow: 5px 2px 5px #000;
+}
+
+.slide-list > p {
+    position: absolute;
+    top: 51.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    text-shadow: 5px 2px 5px #000;
+}
+
+.slide-txt {
+    position: absolute;
+    top: 94%;
+    left: 96%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    width: 150px;
+    text-shadow: 5px 2px 5px #000;
+}
+
+#mainBg {
+    width: 100%;
+    height: 600px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    z-index: 15;
+}
 
 
 /* ----------메인 애니 이미지 */
@@ -107,8 +163,9 @@ input::placeholder {
 #mainAni {
     width: 100%;
     height: 600px;
-    position: relative;
+    position: absolute;
     top: 0;
+    z-index: 30;
 }
 
 .ani {
@@ -121,10 +178,27 @@ input::placeholder {
     display: none;
 }
 
-.ani:first-of-type {
-    display: block;
+.slideBtn {
+    position: absolute;
+    z-index: 50;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255, .4);
+    color: #000;
+    width: 120px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 30px;
+    transition-duration: .4s;
+    display: none;
 }
 
+.slideBtn:hover {
+    font-weight: bold;
+    background-color: rgba(255,255,255, .75);
+}
 
 /*--------------메인 애니 리스트 */
 
@@ -298,9 +372,6 @@ section {
     padding: 10px;
 }
 
-.newAni_list > a:hover > img {
-    opacity: .6;
-}
 
 
 /* -------------인기애니 */
@@ -335,11 +406,8 @@ section {
     padding: 10px;
 }
 
-.hotAni_list > a:hover > img {
-    opacity: .6;
-}
 
-/* -----------분기 애니 */
+/* ----------추억의 애니 */
 
 #Ani-kinds {
     width: 100%;
@@ -371,9 +439,30 @@ section {
     padding: 10px;
 }
 
-.Ani-kinds_list > a:hover > img {
-    opacity: .6;
+
+/* -------------title-box */
+.swiper-slide {
+    position: relative;
 }
+
+.title-box {
+    position: absolute;
+    width: 101%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 3;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.title-box > p {
+    text-align: center;
+    line-height: 180px;
+    font-size: 16px;
+}
+
 
 /* -----------------footer ---- */
 
@@ -395,7 +484,7 @@ footer {
 }
 
 #fmenu-sns {
-    width: 60%;
+    width: 80%;
     display: flex;
     align-items: flex-end;
     flex-direction: column;
@@ -423,7 +512,7 @@ footer {
 
 
 #sns > a > img {
-    width: 40px;
+    width: 38px;
     margin-left: 18px;
     height: 28px;
     transition-duration: .4s;
@@ -432,10 +521,3 @@ footer {
 #sns > a > img:hover {
     transform: scale(1.1);
 }
-/* 
-video {
-    position: absolute;
-    top: 47%;
-    opacity: .35;
-    width: 100%;
-} */

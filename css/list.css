@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+html,body,div,video {
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: black;
+    position: relative;
+}
+
+/********************** header style *************************/
+.mv-box {
+    position: absolute;
+    width: 100%;
+    height: 1080px;
+}
+
+video {
+    height: 100%;
+}
+
+
+header {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    padding: 0 20px;
+    align-items: center;
+    background-color: rgba(0,0,0,.75);
+    position: absolute;
+    z-index: 2;
+}
+
+#logo {
+    font-size: 20px;
+}
+
+#submenu {
+    width: 350px;
+    font-size: 18px;
+    margin-left: 40px;
+    display: flex;
+}
+
+#submenu > li > a {
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+
+#submenu > li:hover > a {
+    color:rgb(139, 139, 139);
+}
+
+#header-inner {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+}
+
+
+#search {
+    padding-top: 8px;
+    width: 230px;
+    position: relative;
+    margin-right: 50px;
+}
+
+#search input { 
+    border: 0;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    padding: 8px;
+    padding-left: 20px;
+    background-color: rgba(0,0,0,0);
+    color: #fff;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+#search input:focus {
+    outline:none;
+}
+
+#search img {
+    position: absolute;
+    width: 25px;
+    padding-top: 3px;
+}
+
+#login {
+    line-height: 47px;
+    font-size: 16px;
+    height: 50px;
+}
+
+#login:hover {
+    color:rgb(139, 139, 139);
+}
+
+/*************************** section ******************************/
+
+#wrap {
+    width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#cover-box {
+    position: relative;
+    height: 1000px;
+    overflow: hidden;
+}
+
+.wrap-box{
+    display: flex;
+    position: absolute;
+    width: 1378px;
+    left: 58%;
+    transform: translate(-50%);
+    top: 7%;
+    display: none;
+}
+
+.wrap-box:first-of-type {
+    display: flex;
+}
+
+.ani {
+    margin-right: 5%;
+}
+
+.choice {
+    margin-left: 10px;
+}
+
+.choice > h2 {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.choice > p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-top: 5px;
+}
+
+.view {
+    display: flex;
+    padding: 20px 0 20px 2px;
+    column-gap: 1.1rem;
+    cursor: pointer;
+}
+
+.stars {
+    color: yellow;
+}
+
+.view > li:hover {
+    transform: scale(1.1);
+}
+
+.view > h3:hover {
+    transform: scale(1.1);
+}
+
+h3 {
+    background: #000;
+    padding: 10px;
+}
+
+.view > li {
+    display: block;
+    background: rgb(22, 69, 172);
+    padding: 10px;
+    text-align: center;
+}
+
+.play-btn {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.play {
+    background: rgb(139, 18, 18);
+    width: 150px;
+    padding: 13px 17px;
+    text-align: center;
+    display: flex;
+    border-radius: 30px;
+    cursor: pointer;
+    transition-duration: .4s;
+    margin-right: 20px;
+}
+
+.play:hover {
+    transform: scale(1.1);
+}
+
+.play > h2 {
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.plays {
+    padding-right: 13px;
+    font-size: 30px;
+}
+
+.play2 {
+    display: flex;
+    background: rgb(36, 66, 201);
+    width: 150px;
+    padding: 13px 17px;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+    transition-duration: .4s;
+}
+
+.play2 > h2 {
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.play2:hover {
+    transform: scale(1.1);
+}
+
+/********************mini-box ********************/
+
+#mini-box {
+    display: flex;
+    margin-top: 5vh;
+    column-gap: 1rem;
+    position: absolute;
+    top: 57vh;
+    left: 53%;
+    transform: translate(-50%);
+}
+
+#mini-box > li {
+    background: #000;
+    width: 160px;
+    height: 270px;
+    transition-duration: .4s;
+}
+
+#mini-box > li:hover {
+    transform: scale(1.1);
+}
+

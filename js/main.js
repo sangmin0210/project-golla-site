@@ -6,10 +6,44 @@ $(document).ready(function() {
         $(this).stop().hide();
     });
 
+
+    var idx = 0;
+    var interval;
+    mainSlide();
+    
+    function mainSlide() {
+      interval = setInterval(function() {
+        $(".slide-list").eq(idx).animate({left: "-100%"}, 800).animate({left: "100%"}, 0);
+        idx==3?idx=0:idx++;
+        $(".slide-list").eq(idx).animate({left: 0}, 800);
+      }, 4000)
+    }
+    
+
     $(".ani_list").click(function() {
-        var index = $(this).index();
-        $('.ani').eq(index).fadeIn(600).siblings('.ani').fadeOut();
+      var index = $(this).index();
+      $('.ani').eq(index).fadeIn(600).siblings('.ani').fadeOut();
+      clearInterval(interval);
+      $(".slide-list").css({display: "none"});
+      $("#mainAni").show(); 
+      $(".slideBtn").show();
     })
+    
+    
+    $(".slideBtn").click(function() {
+      $("#mainAni").hide();
+      $(".slide-list").css({display: "block"});
+      mainSlide();
+    })
+
+    $(".swiper-slide").hover(function() {
+      $(".title-box", this).stop().fadeIn();
+    }, function() {
+      $(".title-box", this).stop().hide();
+    })
+
+
+
 
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 6,
@@ -33,8 +67,8 @@ $(document).ready(function() {
           spaceBetween: 10,
         },
         "@1.50": {
-          slidesPerView: 5,
-          spaceBetween: 0,
+          slidesPerView: 6,
+          spaceBetween: 10,
         },
       },
     });
